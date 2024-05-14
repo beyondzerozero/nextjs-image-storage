@@ -1,4 +1,4 @@
-import { GeistSans } from "geist/font/sans";
+import Header from "@/components/header";
 import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
@@ -7,8 +7,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  title: "Next.js Storage 이미지 업로드 웹앱",
+  description: "beyond ZERO",
 };
 
 export default function RootLayout({
@@ -17,9 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.className}>
+    <html lang="ko">
       <body className="bg-background text-foreground">
-        <main className="min-h-screen flex flex-col items-center">
+        <Header></Header>
+        <main className="min-h-screen flex flex-col items-center px-2">
           {children}
         </main>
       </body>
